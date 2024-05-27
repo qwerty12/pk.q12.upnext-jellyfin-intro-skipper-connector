@@ -3,7 +3,7 @@ Hack to get [MoojMidge's fork of the UpNext Kodi plugin](https://github.com/Mooj
 In Kodi, you need MoojMidge's UpNext fork installed, and [Jellyfin for Kodi](https://jellyfin.org/docs/general/clients/kodi/#jellyfin-for-kodi) installed - *not* JellyCon.
 On your Jellyfin server, you need jumoog's Intro Skipper fork installed - make sure it's configured to detect credits.
 
-This hack works by listening for the UpNext notification the Jellyfin Kodi plugin sends out, adding the credit time offset from the Intro Skipper plugin and sending a new notification to the UpNext plugin. As the UpNext plugin doesn't appear to handle notifications for the same video sent too closely, this waits 10 seconds before doing so.
+This hack works by listening for the UpNext notification the Jellyfin Kodi plugin sends out - only if using it in the addon (i.e. non-native) mode - adding the credit time offset from the Intro Skipper plugin and sending a new notification to the UpNext plugin. As the UpNext plugin doesn't appear to handle notifications for the same video sent too closely, this waits 10 seconds before doing so.
 
 This plugin tries to get the address for the right Jellyfin server automatically, but it's not really a reliable check. As the Intro Skipper plugin requires authentication to call its API methods, the plugin tries to use the Jellyfin plugin's stored API key.
 
